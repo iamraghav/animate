@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>Animaxx</title>
+    <style>
+      body {
+        background-color: #ececec;
+        font-family: Helvetica;
+      }
+      .newsletterForm {
+        width: 300px;
+        margin: 200px auto 0 auto;
+        background-color: #fff;
+        padding: 10px 20px 20px 20px;
+        line-height: 160%;
+        font-size: 14px;
+        text-align: center;
+      }
+      .textbox {
+        width: 275px;
+        font-size: 16px;
+        font-weight: 100;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .btn {
+        background-color: dodgerblue;
+        border: 0;
+        color: #fff;
+        padding: 10px;
+        font-size: 12px;
+        width: 100%;
+        margin-top: 10px;
+        outline: none;
+      }
+      .btn:active {
+        opacity: 0.8;
+      }
+
+      .center {
+
+      margin: 0 auto;
+
+      }
+      h1 {
+        margin: 0;
+        padding-bottom: 10px;
+      }
+
+    .awesome {
+
+      font-family: futura;
+      /*font-style: italic;*/
+
+      width:100%;
+
+      margin: 0 auto;
+      text-align: center;
+
+      color:#313131;
+      font-size:45px;
+      font-weight: bold;
+      /*position: absolute;*/
+      -webkit-animation:colorchange 40s infinite;
+
+
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+	      color: #6698FF;
+      }
+      5% {
+      	color: #6495ED;
+      }
+      10% {
+      	color: #1589FF;
+      }
+      15% {
+      	color: #157DEC;
+      }
+      20% {
+      	color: #306EFF;
+      }
+      25% {
+      	color: #2B65EC;
+      }
+      30% {
+      	color: #728FCE;
+      }
+      35% {
+      	color: #95B9C7;
+      }
+      40% {
+      	color: #87AFC7;
+      }
+      45% {
+      	color: #659EC7;
+      }
+      50% {
+      	color: #3090C7;
+      }
+      55% {
+      	color: #488AC7;
+      }
+      60% {
+      	color: #368BC1;
+      }
+      65% {
+      	color: #357EC7;
+      }
+      70% {
+      	color: #736AFF;
+      }
+      75% {
+      	color: #6960EC;
+      }
+      80% {
+      	color: #1F45FC;
+      }
+      85% {
+      	color: #2B60DE;
+      }
+      90% {
+      	color: #1569C7;
+      }
+      95% {
+      	color: #2554C7;
+      }
+      100% {
+      	color: #0041C2;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="awesome">
+      <h1 class="">Fill It!</h1>
+      <p>Css animations</p>
+    </div>
+    <div class="newsletterForm">
+      <p>Tell us your email and we'll send you stuff you really couldn't care about, everyday!</p>
+      <input type="text" placeholder="Email Address" class="textbox" id="emailfield">
+      <input type="submit" value="Click Me!" class="btn" id="newsletterBtn">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script>
+      $('#newsletterBtn').on('click', function() {
+        $('#emailfield').addClass('animated wobble');
+        $('#emailfield').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $('#emailfield').removeClass('animated wobble');
+        });
+      });
+    </script>
+  </body>
+</html>
